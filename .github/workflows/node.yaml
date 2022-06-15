@@ -9,9 +9,9 @@ jobs:
   build:
     env:
       CI: true
-      strategy:
-        matrix:
-          node-version: [14.x, 16.x]
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
