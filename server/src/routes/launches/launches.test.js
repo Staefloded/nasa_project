@@ -51,7 +51,7 @@ describe("Launch API", () => {
 
       expect(responseDate).toBe(requestDate);
 
-      expect(respopsnse.body).toMatchObject(dataWithoutDate);
+      expect(response.body).toMatchObject(dataWithoutDate);
     });
 
     test("It should catch required properties", async () => {
