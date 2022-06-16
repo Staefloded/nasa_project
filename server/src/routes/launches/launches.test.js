@@ -82,14 +82,14 @@ describe("Launch API", () => {
   describe("Delete launch from launches with launchId", () => {
     test("It should respond with 200 success", async () => {
       const response = await request(app)
-        .delete("/v1/launches/100")
+        .delete("/v1/launches/1")
         .expect("Content-type", /json/)
         .expect(200);
     });
 
     test("It should respond with 404 not found", async () => {
       const response = await request(app)
-        .delete("/v1/launches/1")
+        .delete("/v1/launches/100")
         .expect("Content-type", /json/)
         .expect(404);
 
