@@ -79,23 +79,23 @@ describe("Launch API", () => {
     });
   });
 
-  describe("Delete launch from launches with launchId", () => {
-    test("It should respond with 200 success", async () => {
-      const response = await request(app)
-        .delete("/v1/launches/1")
-        .expect("Content-type", /json/)
-        .expect(200);
-    });
+  // describe("Delete launch from launches with launchId", () => {
+  //   test("It should respond with 200 success", async () => {
+  //     const response = await request(app)
+  //       .delete("/v1/launches/1")
+  //       .expect("Content-type", /json/)
+  //       .expect(200);
+  //   });
 
-    test("It should respond with 404 not found", async () => {
-      const response = await request(app)
-        .delete("/v1/launches/100")
-        .expect("Content-type", /json/)
-        .expect(404);
+  //   test("It should respond with 404 not found", async () => {
+  //     const response = await request(app)
+  //       .delete("/v1/launches/100")
+  //       .expect("Content-type", /json/)
+  //       .expect(404);
 
-      expect(response.body).toStrictEqual({
-        error: "Launch id not found",
-      });
-    });
-  });
+  //     expect(response.body).toStrictEqual({
+  //       error: "Launch id not found",
+  //     });
+  //   });
+  // });
 });
